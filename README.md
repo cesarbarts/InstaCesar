@@ -1,97 +1,85 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# InstaCesar
 
-# Getting Started
+O **InstaCesar** é um clone da interface principal do Instagram desenvolvido em **React Native**. O projeto foca na construção fiel do layout (Pixel Perfect) e na lógica de interação de "curtida" (like), simulando o feed e os stories da rede social.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Diferente de projetos anteriores, este foi construído utilizando **Class Components**, consolidando o entendimento sobre o ciclo de vida clássico do React e manipulação de `this.state`.
 
-## Step 1: Start Metro
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0ae076c0-1ee7-4a7e-b2bf-c48f052c5e78" width="600" alt="Demonstração do InstaCesar" />
+</div>
+<br/>
+* A estrutura de componentes e fluxo de dados pode ser visualizada abaixo:
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+[![](https://mermaid.ink/img/pako:eNp1U91umzAUfhXLvaVRCBCILya1qaJN6rRo2Xqx0AsXDsEK2Mg26tIkj9Cn2KP0xWabQLipucDH_n7OObaPOBM5YIKLSrxmJZUa_XpIOTLjrmm2y4oqRewUrSXjGWto9Yxub7-cNppqIGijhWSgTuiRKU0v0XZVUW0X0FcTvwmuDWsQHdPXwrB2wI3ACiC_Ep9AapY5Wkcc61sF9E1DbeNDn2S3efGxagPMuvSoi2M9CKv2ZSdpU6KlqBvBgWsYQB3Cjl7GJa9LpibKVnBCTwxenf5P4DmYailaCS0QoI_3zMip56tIj3UiP_hagjKF32v-yPZwvBf6459Ay9ZULs9X1mV_5Ax605n_bnLzt7vbO93Syrp3tsZ_afueCzlK4Ip3venz6QAm_25y6Ys-VODOq2BVRW6KyH6e0lLsgdwEQTDGDf3pwOAH03nmZaIS0lCL4jPeKKOOmQQBfQk_YWIP7yTLMdGyBQ_XIGtqQ3y0minWJdSQYmKmOZX7FKf8bDgN5X-EqHuaFO2uxKSglTJR6zJ4YNTcgnpYle40l6LlGhN_5jQwOeK_mMz8aJIs_CRMQn9ugsjDB4uZ-PE8Dv1oPp8F8Sw6e_jNmU4ni2mymMZJMI39yI8XoYchZ-a2fu-ennuB5_-tHimT?type=png)](https://mermaid.live/edit#pako:eNp1U91umzAUfhXLvaVRCBCILya1qaJN6rRo2Xqx0AsXDsEK2Mg26tIkj9Cn2KP0xWabQLipucDH_n7OObaPOBM5YIKLSrxmJZUa_XpIOTLjrmm2y4oqRewUrSXjGWto9Yxub7-cNppqIGijhWSgTuiRKU0v0XZVUW0X0FcTvwmuDWsQHdPXwrB2wI3ACiC_Ep9AapY5Wkcc61sF9E1DbeNDn2S3efGxagPMuvSoi2M9CKv2ZSdpU6KlqBvBgWsYQB3Cjl7GJa9LpibKVnBCTwxenf5P4DmYailaCS0QoI_3zMip56tIj3UiP_hagjKF32v-yPZwvBf6459Ay9ZULs9X1mV_5Ax605n_bnLzt7vbO93Syrp3tsZ_afueCzlK4Ip3venz6QAm_25y6Ys-VODOq2BVRW6KyH6e0lLsgdwEQTDGDf3pwOAH03nmZaIS0lCL4jPeKKOOmQQBfQk_YWIP7yTLMdGyBQ_XIGtqQ3y0minWJdSQYmKmOZX7FKf8bDgN5X-EqHuaFO2uxKSglTJR6zJ4YNTcgnpYle40l6LlGhN_5jQwOeK_mMz8aJIs_CRMQn9ugsjDB4uZ-PE8Dv1oPp8F8Sw6e_jNmU4ni2mymMZJMI39yI8XoYchZ-a2fu-ennuB5_-tHimT)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
 
-```sh
-# Using npm
-npm start
+### Tecnologias Utilizadas
 
-# OR using Yarn
-yarn start
+* [React Native](https://reactnative.dev/) (Framework principal)
+* **Class Components** (Estrutura clássica do React)
+* **StyleSheet** (Estilização nativa)
+* **FlatList** (Renderização otimizada de listas verticais e horizontais)
+
+## Dependências e Versões Necessárias
+
+Para rodar este projeto, você precisará do ambiente React Native configurado.
+
+* Node.js
+* Android Studio (Para emulador Android)
+* Imagens locais (Assets incluídos na pasta `src/`)
+
+## Como rodar o projeto ✅
+
+1. Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/cesarbarts/InstaCesar.git
+cd InstaCesar
+npm install
+# ou
+yarn install
 ```
 
-## Step 2: Build and run your app
+2. Para rodar no Android:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
 ```
 
-### iOS
+3. Para rodar no iOS (apenas Mac):
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+cd ios && pod install && cd ..
+npx react-native run-ios
 ```
 
-Then, and every time you update your native dependencies, run:
+## 📌 Funcionalidades Detalhadas
 
-```sh
-bundle exec pod install
-```
+* **Feed Infinito:** Uso de `FlatList` para renderizar as postagens de forma performática.
+* **Stories:** Lista horizontal (`horizontal={true}`) simulando a navegação de stories no topo do app.
+* **Sistema de Likes:** Cada postagem possui seu próprio gerenciamento de estado. Ao clicar no ícone de coração:
+    * O ícone alterna entre preenchido e vazio.
+    * O contador de curtidas incrementa ou decrementa automaticamente.
+    * A lógica trata gramática (ex: "1 curtida" vs "2 curtidas").
+* **Layout Fiel:** Cabeçalho com ícones de Direct/Notificações e Rodapé (Tab Bar) estático simulando a navegação original.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## ⚠️ Problemas enfrentados
 
-```sh
-# Using npm
-npm run ios
+Trabalhar com componentes de classe trouxe desafios diferentes dos Hooks modernos.
 
-# OR using Yarn
-yarn ios
-```
+### Problema 1: Gerenciamento de Estado Individual
+Ao curtir uma foto, eu precisava que apenas *aquela* postagem específica atualizasse seu ícone e contador, sem renderizar a lista inteira novamente de forma desnecessária.
+* **Como solucionar:** Criei o componente `Postagem` como uma classe independente com seu próprio `this.state`. Assim, a função `curtir()` usa o `this.setState` para modificar apenas os dados daquela instância específica do componente.
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Problema 2: Estilização de Imagens Locais
+Ajustar as imagens (ícones e fotos) para que ficassem com as proporções corretas e bordas arredondadas (como nos Stories).
+* **Como solucionar:** Utilizei propriedades como `resizeMode: "cover"` e cálculos de `borderRadius` (100 ou 1000) para garantir que as imagens de perfil fossem perfeitamente circulares, além de posicionamento absoluto para o ícone de "+" no story do usuário.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## ⏭️ Próximos passos
 
-## Step 3: Modify your app
+Evoluções planejadas para o InstaCesar:
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1. **Migração para Hooks:** Refatorar o código para usar `useState` e `useEffect` (Functional Components).
+2. **Duplo Clique:** Implementar a função de dar like ao dar dois toques rápidos na foto.
+3. **Animação:** Adicionar animação de "escala" (bouncing) no coração ao curtir.
+4. **Câmera:** Integrar com a câmera do dispositivo para simular a postagem de uma nova foto.
